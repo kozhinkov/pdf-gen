@@ -6,15 +6,7 @@
           experience with awesome resumes, ensuring your resume stands
           out. Start building your career success today, easily and for free!
 
-The backend utilizes Node.js and Express.js to support a React application. Check the frontend on [Perfect Resume](https://github.com/Amansingh494/perfect-resume)
-
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AmanSingh494/perfect-resume?logoColor=%234a1ec1)  ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/AmanSingh494/perfect-resume) ![Contributors](https://img.shields.io/github/contributors/AmanSingh494/perfect-resume) [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-
-![Handlebars](https://img.shields.io/badge/Handlebars.js-000000?style=for-the-badge&logo=handlebars&logoColor=white) ![HTML to PDF](https://img.shields.io/badge/HTML_to_PDF-21759B?style=for-the-badge) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
-
+The backend utilizes Node.js and Express.js to support a React application. Check the frontend on [Perfect Resume](https://github.com/kozhinkov/pdf-gen)
 
 
 ## Tech Stack :hammer_and_wrench:
@@ -36,7 +28,7 @@ The backend utilizes Node.js and Express.js to support a React application. Chec
 1. Ensure Node.js is installed on your system. If not, download and install it from [Node.js official website](https://nodejs.org/).
 2. Clone the repository:
     ```sh
-    git clone https://github.com/AmanSingh494/perfect-resume-backend.git
+    git clone https://github.com/kozhinkov/pdf-gen.git
     ```
 3. Navigate to the project directory:
     ```sh
@@ -46,7 +38,7 @@ The backend utilizes Node.js and Express.js to support a React application. Chec
     ```sh
     npm install
     ```
-5.   For frontend setup, refer to [Perfect Resume](https://github.com/Amansingh494/perfect-resume).
+5.   For frontend setup, refer to [Perfect Resume](https://github.com/kozhinkov/pdf-gen).
 6. Update the `.env` file with appropriate backend settings. Specify a port number of your choice and adjust `CORS_ORIGIN` to reflect your frontend URL.
 7. Run the application:
     ```sh
@@ -57,7 +49,7 @@ The backend utilizes Node.js and Express.js to support a React application. Chec
 
 Follow these steps to use the application:
 
-1. First, set up the frontend by following the instructions provided in the [Perfect Resume](https://github.com/Amansingh494/perfect-resume) repository.
+1. First, set up the frontend by following the instructions provided in the [Perfect Resume](https://github.com/kozhinkov/pdf-gen) repository.
 2. Start the backend server by running:
     ```sh
     nodemon app.js
@@ -113,7 +105,7 @@ If you encounter any bugs or have suggestions for improvements, please file an i
 1. **Fork the Repository**: Start by forking the repository on GitHub.
 2. **Clone Your Fork**: Clone your fork to your local machine for development.
     ```sh
-    git clone https://github.com/AmanSingh494/perfect-resume-backend.git
+    git clone https://github.com/kozhinkov/pdf-gen.git
     cd perfect-resume-backend
     ```
 3. **Create a New Branch**: Create a branch for your changes. Naming it something descriptive can be helpful.
