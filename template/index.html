@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #494747;
+            --secondary-color: #040404;
+            --font-primary: sans-serif;
+            --font-large: 2.5rem;
+            --font-medium: 1.25rem;
+            --font-small: 0.85rem;
+            --font-bold: 700;
+            --font-light: lighter;
+        }
+
+        /* utilities */
+        .font-large {
+            font-size: var(--font-large);
+        }
+
+
+        .font-medium {
+            font-size: var(--font-medium);
+        }
+
+        .font-small {
+            font-size: var(--font-small);
+        }
+
+        .font-bold {
+            font-weight: var(--font-bold);
+        }
+
+        .font-light {
+            font-weight: var(--font-light);
+        }
+
+        .black-div {
+            height: 1px;
+            background-color: black;
+            width: auto;
+        }
+
+
+        body {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-primary);
+            height: 1050px;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 26px;
+            left: 0;
+            height: 10rem;
+            width: 100vw;
+            z-index: -1;
+            opacity: 0.5;
+            background-color: lightpink;
+        }
+
+        .white-div {
+            background-color: white;
+            height: 2px;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+        }
+
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            width: 13rem;
+            padding: 1rem;
+            margin: 0 0 0 40px;
+            gap: 10px;
+        }
+
+        .div2 {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            width: 70vw;
+            gap: 1rem;
+        }
+
+        .name {
+            padding: 5rem 0;
+            font-family: sans-serif;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            height: 250px;
+            align-self: flex-start;
+            width: 100%;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            display: flex;
+            border-radius: 5px;
+            justify-content: space-between;
+        }
+
+        .education-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 250px;
+        }
+
+        .education {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .education-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .qualifications {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 250px;
+            justify-content: center;
+        }
+
+        .qualification-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .qualification-item {
+            border-radius: 5px;
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 250px;
+            justify-content: center;
+        }
+
+        .contact-list {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            border-radius: 5px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-history {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+
+        .work-item {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="div1">
+            <div class="profile-photo">
+                <img src="https://a.storyblok.com/f/191576/1200x800/a3640fdc4c/profile_picture_maker_before.webp"
+                    alt="Profile Photo">
+            </div>
+            <div class="contacts">
+                <p class="font-medium font-bold">Contact</p>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <p class="font-small">{{email}}</p>
+                    </div>
+                    <div class="contact-item">
+                        <p class="font-small">{{phone}}
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <p class="font-small">{{address}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="qualifications">
+                <p class="font-medium font-bold">Achievements</p>
+                <div class="qualification-list">
+                    {{#each achievements}}
+                    <div class="qualification-item">
+                        <p class="font-small">{{this}}
+                        </p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="education">
+                <p class="font-medium font-bold">Education</p>
+                <div class="education-list">
+                    {{#each edu}}
+                    <div class="education-item">
+                        <p class="font-small">{{this}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="div2">
+            <div class="font-large name">
+                <p>{{name}}</p>
+            </div>
+            <div class="about">
+                <p class="font-medium font-bold">About me</p>
+                <p>{{about}}</p>
+            </div>
+            <div class="line-div"></div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="skill-list">
+                    {{#each skill}}
+                    <div class="skill-item">{{this}}</div>
+                    {{/each}}
+                </div>
+                <div class="work-history">
+                    <h2>Work History</h2>
+                    {{#each work}}
+                    <div class="work-item">
+                        <!-- <h3>{{this.position}}</h3>
+                        <p>{{this.company}}</p>
+                        <p>{{this.years}}</p> -->
+                        <p>{{this}}</p>
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
